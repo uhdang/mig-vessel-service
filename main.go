@@ -6,8 +6,8 @@ import (
 
 	"os"
 
-	pb "github.com/EwanValentine/shippy-vessel-service/proto/vessel"
 	"github.com/micro/go-micro"
+	pb "github.com/uhdang/mig-vessel-service/proto/vessel"
 )
 
 const (
@@ -44,7 +44,7 @@ func main() {
 	createDummyData(repo)
 
 	srv := micro.NewService(
-		micro.Name("shippy.vessel"),
+		micro.Name("mig.vessel"),
 		micro.Version("latest"),
 	)
 

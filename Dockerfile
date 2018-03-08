@@ -1,6 +1,6 @@
 FROM golang:1.9.0 as builder
 
-WORKDIR /go/src/github.com/EwanValentine/shippy-vessel-service
+WORKDIR /go/src/github.com/uhdang/mig-vessel-service
 
 COPY . .
 
@@ -14,6 +14,6 @@ RUN apk --no-cache add ca-certificates
 
 RUN mkdir /app
 WORKDIR /app
-COPY --from=builder /go/src/github.com/EwanValentine/shippy-vessel-service .
+COPY --from=builder /go/src/github.com/uhdang/mig-vessel-service .
 
-CMD ["./shippy-vessel-service"]
+CMD ["./mig-vessel-service"]
